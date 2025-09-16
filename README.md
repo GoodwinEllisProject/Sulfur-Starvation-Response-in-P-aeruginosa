@@ -1,6 +1,28 @@
-# RNA_seq-analysis
-## RNA-seq Analysis Workflow
+# Sulfur Starvation Response in *Pseudomonas aeruginosa* PAO1
 
-The RNA-seq analysis workflow used in this project was developed and executed on the Galaxy platform. You can view and run the workflow using the link below:
+Code, processed data, and figures supporting the manuscript submitted to **BMC Microbiology**.
 
-[Galaxy RNA-seq Workflow](https://usegalaxy.org/published/workflow?id=b0e19e7315b64c87)
+---
+
+## Graphical Abstract
+![Graphical Abstract](figures/graphical_abstract.png)
+
+---
+
+## Short Abstract
+Sulfur starvation in *Pseudomonas aeruginosa* PAO1 triggers a coordinated response that links sulfur assimilation with iron metabolism and oxidative stress defense. Transcriptomic, proteomic, and metabolomic analyses revealed strong induction of sulfur-scavenging operons and antioxidant enzymes (Ohr, LsfA, SodB), alongside suppression of iron uptake systems and increased expression of iron storage proteins, consistent with an iron-replete state. This metabolic shift reduces siderophore/phenazine production and attenuates virulence pathways regulated by Fur and PrrF. Our findings highlight a novel sulfur–iron axis that buffers oxidative stress and modulates pathogenicity, suggesting new therapeutic opportunities via nutritional immunity.
+
+---
+
+## Repository Contents
+- `scripts/` → R scripts for RNA-seq, proteomics, and figure generation  
+- `data/` → Processed datasets used in figures and tables  
+- `figures/` → Manuscript-ready figures (including graphical abstract)  
+- `supplementary/` → Supplementary tables and methods  
+
+---
+
+## Citation
+If you use this code or data, please cite:  
+> Ugochukwu et al., "Sulfur Starvation Response in *Pseudomonas aeruginosa*" (submitted to BMC Microbiology, 2025).
+
