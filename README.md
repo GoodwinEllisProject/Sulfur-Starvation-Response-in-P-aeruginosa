@@ -5,7 +5,7 @@ Code, processed data, and figures supporting the manuscript submitted to **BMC M
 ---
 
 ## Graphical Abstract
-![Graphical Abstract](figures/graphical abstract CCB.png)
+![Graphical Abstract](<figures/graphical abstract CCB.png>)
 
 ---
 
