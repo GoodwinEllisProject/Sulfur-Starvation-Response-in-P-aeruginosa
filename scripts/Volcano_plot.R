@@ -48,30 +48,15 @@ data %>%
   knitr_table()
 
 # Add colors 
-# Customize the axes to be bold, in Arial, with a font size of 16 for Dr. Ellis
-p2 <- ggplot(data, aes(logFC, -log(adj.P.Val, 10))) +
+
+p2 <- ggplot(data, aes(logFC, -log(adj.P.Val,10))) +
   theme_pubr() + 
   geom_point(aes(color = Expression), size = 2) +
-  xlab(expression(bold("LogFC"))) +  # Make the x-axis label bold
-  ylab(expression(bold(-log[10] ~ "(FDR adjusted p-value)"))) +  # Make the y-axis label bold
+  xlab(expression("LogFC")) + 
+  ylab(expression("-log"[10]*"adj.P.Val")) +
   scale_color_manual(values = c("dodgerblue3", "gray50", "firebrick3")) +
-  guides(colour = "none") +  # Remove the expression legend
-  theme(
-    axis.text = element_text(face = "bold", family = "Arial", size = 16),  # Make axis text bold
-    axis.title = element_text(face = "bold", family = "Arial", size = 18)  # Make axis labels bold
-  )
+  guides(colour = guide_legend(override.aes = list(size=1.5))) 
 p2
-
-
-
-# p2 <- ggplot(data, aes(logFC, -log(adj.P.Val,10))) +
-#   theme_pubr() + 
-#   geom_point(aes(color = Expression), size = 2) +
-#   xlab(expression("LogFC")) + 
-#   ylab(expression(-log[10] ~ "(FDR adjusted p-value)")) +
-#   scale_color_manual(values = c("dodgerblue3", "gray50", "firebrick3")) +
-#   guides(colour = guide_legend(override.aes = list(size=1.5))) 
-# p2
 
 # Since we already know that the genes towards the right are up-regulated and the genes 
 # towards the left are down-regulated, it would be more informative if we colored the points 
@@ -125,4 +110,4 @@ p4 <-  p2 +
                    mapping = aes(logFC, -log(adj.P.Val,10), label = gene.name),
                    size = 3)
 p4
-ggsave("Volcano_plot_2.png", width = 8.9, height = 5, dpi = 600)
+ggsave("Volcano_plot.png", width = 8, height = 5, dpi = 600)
